@@ -1,26 +1,193 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light Mode - Estilo Pergamino/Papel Antiguo */
+  --background: #e8e4d9;
+  --background-rgb: 232, 228, 217;
+  --foreground: #2a2419;
+  --abyss: #3a3530;
+  --ash: #4a4540;
+  --bonfire: #d97706;
+  --sheikah: #0d9488;
+  --accent-glow: #059669;
+  --hero-center: #d4cbb8;
+  --hero-outer: #e8e4d9;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-abyss: var(--abyss);
+  --color-ash: var(--ash);
+  --color-bonfire: var(--bonfire);
+  --color-sheikah: var(--sheikah);
+  --color-accent-glow: var(--accent-glow);
+  --font-sans: 'Space Mono', var(--font-geist-sans);
+  --font-mono: 'Space Mono', var(--font-geist-mono);
+  --font-title: 'Cinzel', serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Colores personalizados que responden al tema */
+.text-souls {
+  color: var(--ash);
+  transition: color 0.35s ease-in-out;
+}
+
+.text-bonfire {
+  color: var(--bonfire);
+  transition: color 0.35s ease-in-out;
+}
+
+.text-sheikah {
+  color: var(--sheikah);
+  transition: color 0.35s ease-in-out;
+}
+
+.bg-abyss {
+  background-color: var(--abyss);
+  transition: background-color 0.35s ease-in-out;
+}
+
+.bg-souls-primary {
+  background-color: var(--background);
+  transition: background-color 0.35s ease-in-out !important;
+}
+
+.bg-souls-secondary {
+  background-color: var(--hero-center);
+  transition: background-color 0.35s ease-in-out;
+}
+
+.border-sheikah {
+  border-color: var(--sheikah);
+  transition: border-color 0.35s ease-in-out;
+}
+
+.border-bonfire {
+  border-color: var(--bonfire);
+  transition: border-color 0.35s ease-in-out;
+}
+
+/* Gradientes reutilizables */
+.bg-card-souls {
+  background: linear-gradient(to bottom right, var(--hero-center), var(--background));
+  transition: background 0.35s ease-in-out;
+}
+
+.bg-section-souls {
+  background: linear-gradient(to bottom, var(--background), var(--hero-center), var(--background));
+  transition: background 0.35s ease-in-out;
+}
+
+.bg-button-bonfire {
+  background: linear-gradient(to right, var(--bonfire), #d97706);
+  transition: background 0.35s ease-in-out;
+}
+
+html.dark .bg-button-bonfire {
+  background: linear-gradient(to right, #ffa500, #ff8800);
+}
+
+/* Bordes y efectos hover */
+.border-souls-default {
+  border-color: rgba(13, 148, 136, 0.3);
+}
+
+html.dark .border-souls-default {
+  border-color: rgba(69, 162, 158, 0.3);
+}
+
+.hover-border-bonfire:hover {
+  border-color: var(--bonfire);
+}
+
+.shadow-bonfire-hover:hover {
+  box-shadow: 0 0 20px rgba(217, 118, 6, 0.5);
+}
+
+html.dark .shadow-bonfire-hover:hover {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.5);
+}
+
+/* Utilidades para partículas y efectos */
+.particle-bonfire {
+  background-color: var(--bonfire);
+}
+
+/* Utilidades para el navbar con transparencia */
+.bg-navbar-souls {
+  background-color: rgba(232, 228, 217, 0.95);
+  transition: background-color 0.3s ease-in-out;
+}
+
+html.dark .bg-navbar-souls {
+  background-color: rgba(11, 12, 16, 0.95);
+}
+
+/* Fuentes */
+.font-souls-title {
+  font-family: 'Cinzel', serif;
+}
+
+.font-souls-mono {
+  font-family: 'Space Mono', monospace;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Space Mono', monospace;
+  cursor: default;
+  transition: background-color 0.35s ease-in-out, color 0.35s ease-in-out;
+  scrollbar-width: thin;
+  scrollbar-color: var(--sheikah) var(--hero-center);
 }
+
+/* Dark Mode - The Abyss (Default) */
+html.dark {
+  --background: #0b0c10;
+  --background-rgb: 11, 12, 16;
+  --foreground: #c5c6c7;
+  --abyss: #0b0c10;
+  --ash: #c5c6c7;
+  --bonfire: #ffa500;
+  --sheikah: #45a29e;
+  --accent-glow: #22c55e;
+  --hero-center: #1a1a1a;
+  --hero-outer: #0b0c10;
+}
+
+html.dark body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Scrollbar personalizada estilo Dark Souls */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hero-center);
+  transition: background 0.35s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sheikah);
+  border-radius: 4px;
+  transition: background 0.35s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bonfire);
+  box-shadow: 0 0 10px var(--bonfire);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bonfire);
+  box-shadow: 0 0 10px var(--bonfire);
+}
+

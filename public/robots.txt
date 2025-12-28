@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow access to documents folder (private files)
+Disallow: /documents/
+
+# Sitemap location
+Sitemap: https://tu-dominio.com/sitemap.xml

@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "experience": "Experiencia",
+    "education": "Formación",
+    "downloadCV": "Descargar CV"
+  },
+  "hero": {
+    "greeting": "Hola, soy Jairo Arturo Leal Moreno",
+    "title": "Desarrollador Frontend",
+    "description": "Junior Frontend Developer | React, Next.js, TypeScript & Tailwind CSS | SQL Basics",
+    "viewProjects": "Ver Proyectos",
+    "contact": "Contactar",
+    "touchBonfire": "▶ Toca la hoguera para descansar ◀",
+    "welcome": "✨ Bienvenido ✨"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "subtitle": "Desarrollador Frontend Junior",
+    "degree": "Ingeniería de Sistemas | 1+ Año de Experiencia",
+    "description1": "Desarrollador frontend con experiencia en React, Tailwind CSS, Vite, Next.js y TypeScript. He construido interfaces modulares y completamente responsive, aplicando manejo de estado escalable con Zustand y flujos interactivos eficientes.",
+    "description2": "Entre mis proyectos destacan un carrito de compras de postres, una interfaz de gestión tipo extensión de navegador y un generador de tickets con carga dinámica de imágenes, todos orientados al rendimiento, la arquitectura limpia y las buenas prácticas de desarrollo.",
+    "education": "FORMACIÓN",
+    "educationValue": "Ing. Sistemas",
+    "experience": "EXPERIENCIA",
+    "experienceValue": "1+ Año",
+    "techStack": "Tecnologías y Herramientas",
+    "techStackSubtitle": "Herramientas de desarrollo moderno"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "completed": "PROYECTO COMPLETADO",
+    "viewCode": "VER CÓDIGO",
+    "items": [
+      {
+        "title": "Extension Manager",
+        "description": "Aplicación web para gestionar extensiones de navegador con sistema de filtros (activas/inactivas), tema oscuro/claro y estados dinámicos. Incluye funcionalidades de activación, desactivación y eliminación con validación de datos en tiempo real."
+      },
+      {
+        "title": "Dessert Shopping Cart",
+        "description": "E-commerce de postres con carrito de compras funcional. Implementa Zustand para gestión de estado global, cálculo automático de totales, confirmación de órdenes y persistencia de datos. Diseño responsive con imágenes adaptativas."
+      },
+      {
+        "title": "Ticket Generator",
+        "description": "Generador de tickets para eventos de conferencias con validación de formularios, carga de imágenes, vista previa del ticket personalizado y confirmación por email. Interfaz moderna con gradientes y efectos visuales."
+      },
+      {
+        "title": "Medical Appointment System",
+        "description": "Sistema de agendamiento médico con autenticación de usuarios, registro con validación de datos, selección de especialidades médicas y horarios disponibles. Backend con Node.js, Express, MongoDB y bcrypt para seguridad."
+      },
+      {
+        "title": "Personal Portfolio",
+        "description": "Portafolio profesional con animaciones de texto tipo máquina de escribir, navegación suave, menú hamburguesa responsive y secciones de experiencia laboral, proyectos y estudios. Diseño minimalista con sistema de colores personalizado."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia Profesional",
+    "achievementsLabel": "LOGROS COMPLETADOS:",
+    "items": [
+      {
+        "title": "Auxiliar de Sistema - Administrador de Software de Geotecnia",
+        "company": "Ingeconsulta",
+        "period": "Febrero 2022 - Julio 2024",
+        "achievements": [
+          "Elaboración de ensayo de laboratorio",
+          "Supervisar y liderar equipo en proyectos de geotecnia",
+          "Control de maquinaria y equipos",
+          "Administrador de software de geotecnia, mantenimiento de equipos y auxiliar de sistema"
+        ]
+      },
+      {
+        "title": "Call Center",
+        "company": "Atento",
+        "period": "Nov 2020 - Jun 2021",
+        "achievements": [
+          "Atender a usuarios proporcionando información, resolviendo consultas y ofreciendo soluciones a sus necesidades",
+          "Desarrollar plan de crecimiento",
+          "Capacitación de personal",
+          "Resolver incidencias y reclamaciones de manera efectiva",
+          "Seguir guías y protocolos establecidos para garantizar la calidad del servicio"
+        ]
+      },
+      {
+        "title": "Proyectos",
+        "company": "Desarrollo Personal",
+        "period": "2023 - Presente",
+        "achievements": [
+          "Desarrollo de una aplicación web y de interfaz interactiva con React, Tailwind CSS, Vite y Zustand"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Formación Académica",
+    "certifications": "Pergaminos de Conocimiento",
+    "scrollsCollected": "pergaminos coleccionados",
+    "main": {
+      "degree": "Ingeniería de Sistemas",
+      "institution": "Universidad de Investigación y Desarrollo - UDI | Colombia"
+    },
+    "items": [
+      {
+        "title": "Construcción de bases de datos con MySQL",
+        "institution": "SENA Servicio Nacional de Aprendizaje",
+        "period": "Octubre 2023",
+        "duration": "40 horas"
+      },
+      {
+        "title": "Variables y estructuras de control en Java",
+        "institution": "SENA Servicio Nacional de Aprendizaje",
+        "period": "Septiembre 2023",
+        "duration": "40 horas"
+      },
+      {
+        "title": "Análisis para el desarrollo móvil",
+        "institution": "SENA Servicio Nacional de Aprendizaje",
+        "period": "Octubre 2021",
+        "duration": "40 horas"
+      },
+      {
+        "title": "Aplicación de la calidad del software",
+        "institution": "SENA Servicio Nacional de Aprendizaje",
+        "period": "Octubre 2021",
+        "duration": "40 horas"
+      },
+      {
+        "title": "Calidad del software en el proceso de desarrollo",
+        "institution": "SENA Servicio Nacional de Aprendizaje",
+        "period": "Octubre 2021",
+        "duration": "40 horas"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Desarrollador Frontend apasionado por crear experiencias web excepcionales.",
+    "quickLinks": "Enlaces Rápidos",
+    "connect": "Conecta Conmigo",
+    "rights": "Diseñado y desarrollado por Jairo Leal"
+  }
+}

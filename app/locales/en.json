@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "experience": "Experience",
+    "education": "Education",
+    "downloadCV": "Download CV"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Jairo Arturo Leal Moreno",
+    "title": "Frontend Developer",
+    "description": "Junior Frontend Developer | React, Next.js, TypeScript & Tailwind CSS | SQL Basics",
+    "viewProjects": "View Projects",
+    "contact": "Contact",
+    "touchBonfire": "▶ Touch the bonfire to rest ◀",
+    "welcome": "✨ Welcome ✨"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Junior Frontend Developer",
+    "degree": "Systems Engineering | 1+ Year of Experience",
+    "description1": "Frontend developer with experience in React, Tailwind CSS, Vite, Next.js and TypeScript. I have built modular and fully responsive interfaces, applying scalable state management with Zustand and efficient interactive flows.",
+    "description2": "Among my featured projects are a dessert shopping cart, a browser extension-type management interface and a ticket generator with dynamic image loading, all focused on performance, clean architecture and development best practices.",
+    "education": "EDUCATION",
+    "educationValue": "Systems Eng.",
+    "experience": "EXPERIENCE",
+    "experienceValue": "1+ Year",
+    "techStack": "Technologies & Tools",
+    "techStackSubtitle": "Modern development tools"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "completed": "PROJECT COMPLETED",
+    "viewCode": "VIEW CODE",
+    "items": [
+      {
+        "title": "Extension Manager",
+        "description": "Web application to manage browser extensions with filter system (active/inactive), dark/light theme and dynamic states. Includes activation, deactivation and deletion functionalities with real-time data validation."
+      },
+      {
+        "title": "Dessert Shopping Cart",
+        "description": "Dessert e-commerce with functional shopping cart. Implements Zustand for global state management, automatic total calculation, order confirmation and data persistence. Responsive design with adaptive images."
+      },
+      {
+        "title": "Ticket Generator",
+        "description": "Ticket generator for conference events with form validation, image upload, personalized ticket preview and email confirmation. Modern interface with gradients and visual effects."
+      },
+      {
+        "title": "Medical Appointment System",
+        "description": "Medical appointment system with user authentication, data validation registration, medical specialties selection and available schedules. Backend with Node.js, Express, MongoDB and bcrypt for security."
+      },
+      {
+        "title": "Personal Portfolio",
+        "description": "Professional portfolio with typewriter-style text animations, smooth navigation, responsive hamburger menu and sections for work experience, projects and studies. Minimalist design with custom color system."
+      }
+    ]
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "achievementsLabel": "COMPLETED ACHIEVEMENTS:",
+    "items": [
+      {
+        "title": "System Assistant - Geotechnical Software Administrator",
+        "company": "Ingeconsulta",
+        "period": "February 2022 - July 2024",
+        "achievements": [
+          "Laboratory test preparation",
+          "Supervise and lead team in geotechnical projects",
+          "Machinery and equipment control",
+          "Geotechnical software administrator, equipment maintenance and system assistant"
+        ]
+      },
+      {
+        "title": "Call Center",
+        "company": "Atento",
+        "period": "Nov 2020 - Jun 2021",
+        "achievements": [
+          "Assist users by providing information, resolving queries and offering solutions to their needs",
+          "Develop growth plan",
+          "Staff training",
+          "Resolve incidents and complaints effectively",
+          "Follow established guidelines and protocols to ensure service quality"
+        ]
+      },
+      {
+        "title": "Projects",
+        "company": "Personal Development",
+        "period": "2023 - Present",
+        "achievements": [
+          "Development of a web application and interactive interface with React, Tailwind CSS, Vite and Zustand"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "title": "Academic Background",
+    "certifications": "Knowledge Scrolls",
+    "scrollsCollected": "scrolls collected",
+    "main": {
+      "degree": "Systems Engineering",
+      "institution": "Research and Development University - UDI | Colombia"
+    },
+    "items": [
+      {
+        "title": "MySQL Database Construction",
+        "institution": "SENA National Learning Service",
+        "period": "October 2023",
+        "duration": "40 hours"
+      },
+      {
+        "title": "Variables and Control Structures in Java",
+        "institution": "SENA National Learning Service",
+        "period": "September 2023",
+        "duration": "40 hours"
+      },
+      {
+        "title": "Mobile Development Analysis",
+        "institution": "SENA National Learning Service",
+        "period": "October 2021",
+        "duration": "40 hours"
+      },
+      {
+        "title": "Software Quality Application",
+        "institution": "SENA National Learning Service",
+        "period": "October 2021",
+        "duration": "40 hours"
+      },
+      {
+        "title": "Software Quality in Development Process",
+        "institution": "SENA National Learning Service",
+        "period": "October 2021",
+        "duration": "40 hours"
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Frontend developer passionate about creating exceptional web experiences.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect With Me",
+    "rights": "Designed and developed by Jairo Leal"
+  }
+}
