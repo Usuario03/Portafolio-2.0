@@ -1,5 +1,11 @@
 "use client";
 
+/**
+ * Componente LanguageToggle - Botón para cambiar idioma ES/EN
+ * Implementa efecto flip 3D al cambiar entre idiomas
+ * Muestra "ES" o "EN" según el idioma activo
+ */
+
 import { useLanguage } from "../contexts/LanguageContext";
 import { motion } from "framer-motion";
 

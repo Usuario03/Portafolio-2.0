@@ -1,9 +1,21 @@
 "use client";
 
+/**
+ * Componente ExperienceTimeline - Línea de tiempo de experiencia laboral
+ * Muestra la trayectoria profesional en formato de timeline vertical
+ * Estilo Dark Souls con camino conectado y marcadores
+ * Los datos se cargan desde las traducciones (locales/es.json, en.json)
+ */
+
 import { useLanguage } from "../../contexts/LanguageContext";
 import FogReveal from "../FogReveal";
 import { motion } from "framer-motion";
 
+/**
+ * Datos estáticos de experiencia laboral
+ * Usados como respaldo y para mantener estructura
+ * Los textos traducidos vienen de t.experience.items
+ */
 const experiences = [
   {
     title: "Auxiliar de Sistema - Administrador de Software de Geotecnia",
@@ -39,25 +51,29 @@ const experiences = [
 ];
 
 export default function ExperienceTimeline() {
+  // Hook para obtener traducciones
   const { t } = useLanguage();
 
   return (
     <section id="experiencia" className="py-20 bg-section-souls relative overflow-hidden">
-      {/* Efecto de mapa antiguo */}
+      {/* Efecto de textura de mapa antiguo con puntos */}
       <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: `radial-gradient(circle at center, rgba(69, 162, 158, 0.1) 1px, transparent 1px)`,
         backgroundSize: '40px 40px'
       }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Título de la sección con animación de niebla */}
         <FogReveal>
           <div className="text-center mb-16">
+            {/* Título principal estilo Souls */}
             <h2 
               className="text-5xl md:text-6xl font-bold text-souls mb-6 tracking-wider"
               style={{ fontFamily: 'Cinzel, serif' }}
             >
               {t.experience.title}
             </h2>
+            {/* Línea decorativa con diamante central */}
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-32 bg-linear-to-r from-transparent via-[#ffa500] to-[#ffa500]" />
               <div className="w-2 h-2 bg-[#ffa500] rotate-45" />
@@ -66,7 +82,9 @@ export default function ExperienceTimeline() {
           </div>
         </FogReveal>
 
+        {/* Timeline de experiencias */}
         <div className="max-w-3xl mx-auto">
+          {/* Mapeo de items de experiencia desde traducciones */}
           {t.experience.items.map((exp: any, index: number) => (
             <FogReveal key={index} delay={0.2}>
               <div className="relative pl-12 pb-12 last:pb-0">

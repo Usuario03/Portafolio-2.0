@@ -95,8 +95,9 @@
   },
   "education": {
     "title": "Formación Académica",
-    "certifications": "Pergaminos de Conocimiento",
-    "scrollsCollected": "pergaminos coleccionados",
+    "certifications": "Certificaciones SENA",
+    "senaDescription": "SENA: Servicio Nacional de Aprendizaje",
+    "scrollsCollected": "certificaciones obtenidas",
     "main": {
       "degree": "Ingeniería de Sistemas",
       "institution": "Universidad de Investigación y Desarrollo - UDI | Colombia"

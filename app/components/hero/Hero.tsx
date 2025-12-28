@@ -1,18 +1,35 @@
 "use client";
 
+/**
+ * Componente Hero - Sección principal del portafolio
+ * Incluye una hoguera interactiva inspirada en Dark Souls que al hacer clic
+ * enciende y revela el contenido del portafolio
+ */
+
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
 export default function Hero() {
+  // Hook para manejar traducciones (español/inglés)
   const { t } = useLanguage();
+  
+  // Estado para controlar si la hoguera está encendida
   const [bonfireLit, setBonfireLit] = useState(false);
 
+  /**
+   * Función para hacer scroll suave a una sección específica
+   * @param id - ID del elemento al que se hará scroll
+   */
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });
   };
 
+  /**
+   * Función que enciende la hoguera y navega a la sección "sobre-mi"
+   * después de 1.5 segundos para dar tiempo a la animación
+   */
   const lightBonfire = () => {
     setBonfireLit(true);
     setTimeout(() => {

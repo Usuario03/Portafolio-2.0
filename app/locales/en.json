@@ -95,8 +95,9 @@
   },
   "education": {
     "title": "Academic Background",
-    "certifications": "Knowledge Scrolls",
-    "scrollsCollected": "scrolls collected",
+    "certifications": "SENA Certifications",
+    "senaDescription": "SENA: National Learning Service",
+    "scrollsCollected": "certifications obtained",
     "main": {
       "degree": "Systems Engineering",
       "institution": "Research and Development University - UDI | Colombia"

@@ -1,4 +1,11 @@
 "use client"
+
+/**
+ * Componente ThemeToggle - Botón para cambiar entre tema claro/oscuro
+ * Usa imágenes personalizadas de Hollow Knight para los iconos
+ * Incluye animaciones de escala y rotación al interactuar
+ */
+
 import { useTheme } from "../contexts/ThemeContext";
 import { motion } from "framer-motion";
 

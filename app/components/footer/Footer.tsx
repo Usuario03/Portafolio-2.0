@@ -1,10 +1,22 @@
 "use client";
 
+/**
+ * Componente Footer - Pie de página del portafolio
+ * Contiene tres columnas:
+ * 1. Branding y tagline
+ * 2. Enlaces de navegación rápida
+ * 3. Redes sociales (LinkedIn, GitHub)
+ * Con efecto de niebla y copyright dinámico
+ */
+
 import { useLanguage } from "../../contexts/LanguageContext";
 import { motion } from "framer-motion";
 
 export default function Footer() {
+  // Hook para traducciones
   const { t } = useLanguage();
+  
+  // Año actual para copyright dinámico
   const currentYear = new Date().getFullYear();
 
   return (

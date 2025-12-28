@@ -1,13 +1,29 @@
 "use client";
 
+/**
+ * Componente ProjectsGrid - Sección de proyectos destacados
+ * Muestra un grid responsive de tarjetas de proyectos
+ * Cada proyecto incluye: título, descripción, icono, tecnologías y link a GitHub
+ * Diseño inspirado en Dark Souls con efectos de niebla
+ */
+
 import { useLanguage } from "../../contexts/LanguageContext";
 import ProjectCard from "./ProjectCard";
 import FogReveal from "../FogReveal";
 import { Puzzle, ShoppingCart, Ticket, CalendarClock, UserCircle } from "lucide-react";
 
 export default function ProjectsGrid() {
+  // Hook para obtener traducciones
   const { t } = useLanguage();
 
+  /**
+   * Datos complementarios de proyectos
+   * Las traducciones (título/descripción) vienen de t.projects.items
+   * Aquí se definen:
+   * - image: Componente de icono Lucide
+   * - tags: Array de tecnologías utilizadas
+   * - githubUrl: Enlace al repositorio
+   */
   const projectsData = [
     { image: <Puzzle size={80} className="text-[#45a29e]" />, tags: ["React", "Vite", "Tailwind CSS", "State Management"], githubUrl: "https://github.com/Usuario03/Proyecto-Extension" },
     { image: <ShoppingCart size={80} className="text-[#45a29e]" />, tags: ["React", "Zustand", "Vite", "Tailwind CSS"], githubUrl: "https://github.com/Usuario03/Cart-main" },

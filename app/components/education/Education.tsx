@@ -1,11 +1,22 @@
 "use client";
 
+/**
+ * Componente Education - Sección de Formación Académica y Certificaciones
+ * Muestra la educación principal como un "tomo legendario"
+ * y las certificaciones como "pergaminos" coleccionables
+ * Incluye botón para mostrar/ocultar certificaciones
+ */
+
 import { useLanguage } from "../../contexts/LanguageContext";
 import { useState } from "react";
 import FogReveal from "../FogReveal";
 import { motion } from "framer-motion";
 import { GraduationCap, Database, Braces, Smartphone, ShieldCheck, Settings, Scroll } from "lucide-react";
 
+/**
+ * Iconos para cada certificación
+ * Lucide icons relacionados con cada tecnología
+ */
 const certificationIcons = [
   <Database size={32} className="text-[#45a29e]" />,
   <Braces size={32} className="text-[#45a29e]" />,
@@ -15,18 +26,22 @@ const certificationIcons = [
 ];
 
 export default function Education() {
+  // Hook para traducciones
   const { t } = useLanguage();
+  
+  // Estado para controlar visibilidad de certificaciones
   const [showCertifications, setShowCertifications] = useState(false);
 
   return (
     <section id="formacion" className="py-20 bg-section-souls relative overflow-hidden">
-      {/* Efecto de biblioteca antigua */}
+      {/* Efecto de textura de biblioteca antigua con cuadrícula */}
       <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: `linear-gradient(0deg, transparent 24%, rgba(69, 162, 158, 0.1) 25%, rgba(69, 162, 158, 0.1) 26%, transparent 27%, transparent 74%, rgba(69, 162, 158, 0.1) 75%, rgba(69, 162, 158, 0.1) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(69, 162, 158, 0.1) 25%, rgba(69, 162, 158, 0.1) 26%, transparent 27%, transparent 74%, rgba(69, 162, 158, 0.1) 75%, rgba(69, 162, 158, 0.1) 76%, transparent 77%, transparent)`,
         backgroundSize: '50px 50px'
       }} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Título de la sección */}
         <FogReveal>
           <div className="text-center mb-16">
             <h2 
@@ -35,6 +50,7 @@ export default function Education() {
             >
               {t.education.title}
             </h2>
+            {/* Línea decorativa */}
             <div className="flex items-center justify-center gap-4">
               <div className="h-px w-32 bg-linear-to-r from-transparent via-[#45a29e] to-[#45a29e]" />
               <span className="text-2xl">✦</span>
@@ -44,7 +60,7 @@ export default function Education() {
         </FogReveal>
 
         <div className="max-w-4xl mx-auto space-y-8">
-          {/* Formación Principal - Gran Tomo Legendario */}
+          {/* Formación Principal - Tarjeta tipo "Item Legendario" */}
           <FogReveal>
             <motion.div
               whileHover={{ scale: 1.02 }}
@@ -78,7 +94,7 @@ export default function Education() {
                     {t.education.main.degree}
                   </h3>
                   <p className="text-[#45a29e] font-mono tracking-wider">
-                    📍 {t.education.main.institution}
+                    {t.education.main.institution}
                   </p>
                 </div>
               </div>
@@ -163,7 +179,7 @@ export default function Education() {
                       {t.education.certifications}
                     </h3>
                     <p className="text-[#45a29e] text-xs font-mono mt-1">
-                      {t.education.items.length} {t.education.scrollsCollected}
+                      {t.education.senaDescription}
                     </p>
                   </div>
                 </div>

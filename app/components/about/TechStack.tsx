@@ -1,7 +1,22 @@
 "use client";
 
+/**
+ * Componente TechStack - Grid de tecnologías y herramientas
+ * Muestra las tecnologías con sistema de rareza tipo RPG
+ * (Legendary, Epic, Rare) con efectos visuales correspondientes
+ * Los iconos se cargan desde CDN de devicons
+ */
+
 import { motion } from "framer-motion";
 
+/**
+ * Array de tecnologías con sus propiedades
+ * Cada tecnología incluye:
+ * - name: Nombre de la tecnología
+ * - icon: URL del icono desde devicons CDN
+ * - type: Descripción del tipo/uso
+ * - rarity: Nivel de importancia (legendary/epic/rare)
+ */
 const technologies = [
   { 
     name: "React", 
@@ -53,21 +68,31 @@ const technologies = [
   },
 ];
 
+/**
+ * Colores de gradiente según rareza de la tecnología
+ * Define el color de la línea superior que aparece en hover
+ */
 const rarityColors = {
-  legendary: "from-[#ffa500] to-[#ff8800]",
-  epic: "from-[#9333ea] to-[#7e22ce]",
-  rare: "from-[#3b82f6] to-[#2563eb]",
+  legendary: "from-[#ffa500] to-[#ff8800]",  // Naranja/dorado - Tecnologías core
+  epic: "from-[#9333ea] to-[#7e22ce]",      // Morado - Tecnologías importantes
+  rare: "from-[#3b82f6] to-[#2563eb]",      // Azul - Tecnologías complementarias
 };
 
+/**
+ * Efectos de sombra/brillo según rareza
+ * Se aplican al card en hover para dar feedback visual
+ */
 const rarityGlow = {
-  legendary: "shadow-[0_0_20px_rgba(255,165,0,0.5)]",
-  epic: "shadow-[0_0_15px_rgba(147,51,234,0.4)]",
-  rare: "shadow-[0_0_10px_rgba(59,130,246,0.3)]",
+  legendary: "shadow-[0_0_20px_rgba(255,165,0,0.5)]",     // Brillo intenso naranja
+  epic: "shadow-[0_0_15px_rgba(147,51,234,0.4)]",        // Brillo medio morado
+  rare: "shadow-[0_0_10px_rgba(59,130,246,0.3)]",        // Brillo suave azul
 };
 
 export default function TechStack() {
   return (
+    // Grid responsive: 2 columnas en móvil, 4 en desktop
     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+      {/* Mapeo de tecnologías con animación escalonada */}
       {technologies.map((tech, index) => (
         <motion.div
           key={tech.name}

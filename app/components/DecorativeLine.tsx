@@ -1,18 +1,34 @@
+/**
+ * Componente DecorativeLine - Línea decorativa con diamante central
+ * Utilizada como separador visual entre secciones
+ * Estilo inspirado en divisores de Dark Souls
+ */
+
+/**
+ * Props del componente
+ */
 interface DecorativeLineProps {
-  color?: "bonfire" | "sheikah";
-  width?: "sm" | "md" | "lg";
+  color?: "bonfire" | "sheikah";  // Color del tema: naranja o turquesa
+  width?: "sm" | "md" | "lg";     // Ancho de las líneas
 }
 
+/**
+ * Componente de línea decorativa con gradientes y diamante central
+ * @param color - Esquema de color (bonfire=naranja, sheikah=turquesa)
+ * @param width - Tamaño de las líneas laterales
+ */
 export default function DecorativeLine({ color = "sheikah", width = "md" }: DecorativeLineProps) {
+  // Paleta de colores para cada tema
   const colors = {
-    bonfire: { main: "#ffa500", secondary: "#ffa500" },
-    sheikah: { main: "#45a29e", secondary: "#45a29e" }
+    bonfire: { main: "#ffa500", secondary: "#ffa500" },  // Naranja/dorado
+    sheikah: { main: "#45a29e", secondary: "#45a29e" }   // Turquesa
   };
   
+  // Clases de ancho para las líneas
   const widths = {
-    sm: "w-20",
-    md: "w-32",
-    lg: "w-40"
+    sm: "w-20",   // Pequeño: 5rem
+    md: "w-32",   // Medio: 8rem
+    lg: "w-40"    // Grande: 10rem
   };
 
   const selectedColor = colors[color];

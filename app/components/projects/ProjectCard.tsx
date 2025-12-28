@@ -1,15 +1,22 @@
 "use client";
 
+/**
+ * Componente ProjectCard - Tarjeta individual de proyecto
+ * Estilo inspirado en Dark Souls con efecto de "enemigo derrotado"
+ * Incluye animaciones al entrar en viewport y hover
+ */
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 
+// Props del componente
 interface ProjectCardProps {
-  title: string;
-  description: string;
-  image: React.ReactNode;
-  tags: string[];
-  githubUrl?: string;
+  title: string;              // Título del proyecto
+  description: string;        // Descripción del proyecto
+  image: React.ReactNode;     // Ícono o imagen (componente Lucide)
+  tags: string[];            // Tecnologías utilizadas
+  githubUrl?: string;        // URL del repositorio (opcional)
 }
 
 export default function ProjectCard({
@@ -19,6 +26,7 @@ export default function ProjectCard({
   tags,
   githubUrl,
 }: ProjectCardProps) {
+  // Estado para animación de "proyecto completado" (enemigo derrotado)
   const [isDefeated, setIsDefeated] = useState(false);
   const { t } = useLanguage();
 

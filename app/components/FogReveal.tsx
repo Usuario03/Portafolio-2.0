@@ -1,22 +1,36 @@
 "use client";
 
+/**
+ * Componente FogReveal - Efecto de revelado con niebla
+ * Componente wrapper que añade animación de aparición
+ * con efecto de desenfoque (niebla) al entrar en viewport
+ * Inspirado en las cinemáticas de Dark Souls
+ */
+
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
+/**
+ * Props del componente FogReveal
+ */
 interface FogRevealProps {
-  children: ReactNode;
-  delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right';
-  className?: string;
+  children: ReactNode;                              // Contenido a animar
+  delay?: number;                                   // Retraso antes de iniciar animación (segundos)
+  direction?: 'up' | 'down' | 'left' | 'right';   // Dirección desde donde aparece
+  className?: string;                               // Clases CSS adicionales
 }
 
 const FogReveal = ({ 
   children, 
-  delay = 0, 
-  direction = 'up',
+  delay = 0,                    // Por defecto sin retraso
+  direction = 'up',            // Por defecto aparece desde abajo
   className = '' 
 }: FogRevealProps) => {
   
+  /**
+   * Offsets iniciales según la dirección de aparición
+   * Define desde dónde comienza la animación
+   */
   const directionOffset = {
     up: { y: 40 },
     down: { y: -40 },

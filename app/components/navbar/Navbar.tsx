@@ -1,5 +1,12 @@
 "use client";
 
+/**
+ * Componente Navbar - Barra de navegación principal
+ * Incluye menú sticky con efecto glassmorphism, navegación por secciones,
+ * toggle de tema/idioma y botón de descarga de CV
+ * Responsive con menú hamburguesa en móvil
+ */
+
 import ThemeToggle from "../ThemeToggle";
 import LanguageToggle from "../LanguageToggle";
 import { useLanguage } from "../../contexts/LanguageContext";
@@ -8,9 +15,17 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Navbar() {
+  // Hook para traducciones
   const { t } = useLanguage();
+  
+  // Estado para controlar apertura/cierre del menú móvil
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  /**
+   * Navega a una sección específica con scroll suave
+   * y cierra el menú móvil si está abierto
+   * @param id - ID de la sección destino
+   */
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     element?.scrollIntoView({ behavior: "smooth" });

@@ -1,14 +1,30 @@
+/**
+ * Generador de Favicon Dinámico
+ * Crea el favicon del sitio usando Next.js ImageResponse API
+ * Genera un ícono de llama (hoguera) en colores Dark Souls
+ * sobre fondo oscuro gradiente
+ * 
+ * El favicon se genera en el edge runtime para mejor rendimiento
+ */
+
 import { ImageResponse } from 'next/og';
 
+// Ejecuta en edge runtime (más rápido)
 export const runtime = 'edge';
 
+// Tamaño del favicon (32x32 es estándar)
 export const size = {
   width: 32,
   height: 32,
 };
 
+// Tipo MIME de la imagen generada
 export const contentType = 'image/png';
 
+/**
+ * Componente que genera el favicon
+ * Retorna una imagen SVG renderizada como PNG
+ */
 export default function Icon() {
   return new ImageResponse(
     (

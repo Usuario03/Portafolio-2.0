@@ -1,11 +1,18 @@
 "use client";
 
+/**
+ * Componente About - Sección "Sobre Mí"
+ * Muestra información personal, descripción profesional y stack tecnológico
+ * Diseño tipo pergamino/item de Dark Souls con efectos decorativos
+ */
+
 import { useLanguage } from "../../contexts/LanguageContext";
 import TechStack from "./TechStack";
 import FogReveal from "../FogReveal";
 import { motion } from "framer-motion";
 
 export default function About() {
+  // Hook para obtener traducciones según idioma activo
   const { t } = useLanguage();
 
   return (
@@ -13,7 +20,7 @@ export default function About() {
       id="sobre-mi"
       className="py-20 bg-section-souls relative overflow-hidden"
     >
-      {/* Efecto de textura de pergamino */}
+      {/* Efecto de textura de pergamino con líneas verticales */}
       <div className="absolute inset-0 opacity-5" style={{
         backgroundImage: `repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(197, 198, 199, 0.1) 2px, rgba(197, 198, 199, 0.1) 4px)`
       }} />
