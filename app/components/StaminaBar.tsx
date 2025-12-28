@@ -68,7 +68,7 @@ const StaminaBar = () => {
           {[25, 50, 75].map((mark) => (
             <div
               key={mark}
-              className="absolute top-0 h-full w-[1px] bg-sheikah/50"
+              className="absolute top-0 h-full w-px bg-sheikah/50"
               style={{ left: `${mark}%` }}
             />
           ))}

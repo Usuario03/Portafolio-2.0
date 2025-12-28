@@ -37,16 +37,11 @@ export default function Footer() {
               className="text-2xl font-bold text-[#ffa500] mb-4 tracking-wider"
               style={{ fontFamily: 'Cinzel, serif' }}
             >
-              JAIRO DEV
+              JAIRO LEAL
             </h3>
-            <p className="text-souls/70 text-sm leading-relaxed">
-              {t.footer.tagline}
+            <p className="text-souls/80 text-base leading-relaxed font-medium">
+              Frontend Developer | React & Next.js
             </p>
-            <div className="mt-4 flex items-center gap-2 text-[#45a29e] text-xs font-mono">
-              <span>✦</span>
-              <span>Frontend Developer</span>
-              <span>✦</span>
-            </div>
           </motion.div>
 
           {/* Columna 2 - Enlaces rápidos estilo menú */}

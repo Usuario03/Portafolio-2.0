@@ -27,9 +27,15 @@ export default function Navbar() {
    * @param id - ID de la sección destino
    */
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    element?.scrollIntoView({ behavior: "smooth" });
     setMobileMenuOpen(false);
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        const yOffset = -80; // Offset para el navbar
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    }, 100); // Pequeño delay para cerrar el menú primero
   };
 
   return (
@@ -37,7 +43,7 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="sticky top-0 z-50 bg-[#e8e4d9]/95 dark:bg-[#0b0c10]/95 backdrop-blur-md border-b-2 border-souls-default transition-[background-color,border-color] duration-[350ms] ease-in-out"
+      className="sticky top-0 z-50 bg-[#e8e4d9]/95 dark:bg-[#0b0c10]/95 backdrop-blur-md border-b-2 border-souls-default transition-[background-color,border-color] duration-350 ease-in-out"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between md:justify-center items-center h-16">
@@ -100,10 +106,11 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-souls-default bg-[#e8e4d9]/95 dark:bg-[#0b0c10]/95 backdrop-blur-md"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="md:hidden border-t border-souls-default bg-[#e8e4d9]/95 dark:bg-[#0b0c10]/95 backdrop-blur-md overflow-hidden"
           >
             <div className="px-4 py-4 space-y-2">
               {[
@@ -113,21 +120,25 @@ export default function Navbar() {
                 { id: "experiencia", label: t.nav.experience },
                 { id: "formacion", label: t.nav.education },
               ].map((item) => (
-                <button
+                <motion.button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className="block w-full text-left px-4 py-3 text-souls hover:text-bonfire hover:bg-souls-default/20 transition-colors font-mono text-sm tracking-wider rounded"
+                  whileHover={{ scale: 1.02, x: 4 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="block w-full text-left px-4 py-3 text-souls hover:text-bonfire hover:bg-souls-default/30 transition-colors duration-200 font-mono text-sm tracking-wider rounded border border-transparent hover:border-bonfire/20"
                 >
                   {item.label}
-                </button>
+                </motion.button>
               ))}
-              <a
+              <motion.a
                 href="/documents/Hoja de vida-Jairo Leal.pdf"
                 download
-                className="block w-full text-center px-4 py-3 bg-button-bonfire text-[#2a2419] dark:text-[#0b0c10] font-bold text-xs tracking-wider border-2 border-bonfire rounded mt-4"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="block w-full text-center px-4 py-3 bg-button-bonfire text-[#2a2419] dark:text-[#0b0c10] font-bold text-xs tracking-wider border-2 border-bonfire rounded mt-4 hover:shadow-bonfire-hover transition-all"
               >
                 {t.nav.downloadCV}
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         )}
