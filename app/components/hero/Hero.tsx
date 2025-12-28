@@ -128,17 +128,17 @@ export default function Hero() {
             className="space-y-4 mt-8"
           >
             <h1 
-              className="text-5xl md:text-7xl font-bold text-souls tracking-wide"
+              className="text-4xl sm:text-5xl md:text-7xl font-bold text-souls tracking-wide"
               style={{ fontFamily: 'Cinzel, serif' }}
             >
               Jairo Arturo Leal
             </h1>
-            <div className="flex items-center justify-center gap-4">
-              <div className="h-px w-20 bg-linear-to-r from-transparent via-[#45a29e] to-transparent" />
-              <p className="text-xl md:text-2xl text-sheikah font-mono tracking-widest">
+            <div className="flex items-center justify-center gap-2 sm:gap-4">
+              <div className="h-px w-12 sm:w-20 bg-linear-to-r from-transparent via-[#45a29e] to-transparent" />
+              <p className="text-base sm:text-xl md:text-2xl text-sheikah font-mono tracking-widest">
                 {t.hero.title}
               </p>
-              <div className="h-px w-20 bg-linear-to-r from-transparent via-[#45a29e] to-transparent" />
+              <div className="h-px w-12 sm:w-20 bg-linear-to-r from-transparent via-[#45a29e] to-transparent" />
             </div>
           </motion.div>
 
@@ -157,11 +157,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.8 }}
-            className="flex flex-wrap gap-4 pt-8"
+            className="flex flex-col sm:flex-row flex-wrap gap-4 pt-8 justify-center w-full sm:w-auto px-4"
           >
             <button
               onClick={() => scrollToSection("proyectos")}
-              className="group relative px-8 py-4 bg-button-bonfire text-[#2a2419] dark:text-[#0b0c10] rounded font-bold tracking-wide overflow-hidden transition-all hover:scale-105 shadow-bonfire-hover font-souls-mono"
+              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-button-bonfire text-[#2a2419] dark:text-[#0b0c10] rounded font-bold text-sm sm:text-base tracking-wide overflow-hidden transition-all hover:scale-105 shadow-bonfire-hover font-souls-mono"
             >
               <span className="relative z-10">VER PROYECTOS</span>
               <div className="absolute inset-0 bg-linear-to-r from-[#ff8800] to-[#ffa500] opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -169,7 +169,7 @@ export default function Hero() {
             
             <button
               onClick={() => scrollToSection("sobre-mi")}
-              className="group px-8 py-4 border-2 border-sheikah text-sheikah rounded font-bold tracking-wide transition-all hover:bg-sheikah/10 hover:scale-105 hover:shadow-[0_0_20px_rgba(69,162,158,0.3)]"
+              className="group px-6 sm:px-8 py-3 sm:py-4 border-2 border-sheikah text-sheikah rounded font-bold text-sm sm:text-base tracking-wide transition-all hover:bg-sheikah/10 hover:scale-105 hover:shadow-[0_0_20px_rgba(69,162,158,0.3)]"
               style={{ fontFamily: 'Space Mono, monospace' }}
             >
               SOBRE MÍ

@@ -28,7 +28,7 @@ export default function ProjectsGrid() {
           <div className="text-center mb-16">
             {/* Título estilo Dark Souls */}
             <h2 
-              className="text-5xl md:text-6xl font-bold text-souls mb-6 tracking-wider"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-souls mb-6 tracking-wider"
               style={{ fontFamily: 'Cinzel, serif' }}
             >
               {t.projects.title}
